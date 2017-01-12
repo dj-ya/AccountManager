@@ -15,4 +15,3 @@ C:\Users\dvj\Documents\Visual Studio 2015\Projects\AcountManager\AcountManager\o
 C:\Users\dvj\Documents\Visual Studio 2015\Projects\AcountManager\AcountManager\obj\Release\AccountManager.Properties.Resources.resources
 C:\Users\dvj\Documents\Visual Studio 2015\Projects\AcountManager\AcountManager\obj\Release\AccountManager.csproj.GenerateResource.Cache
 C:\Users\dvj\Documents\Visual Studio 2015\Projects\AcountManager\AcountManager\obj\Release\AccountManager.exe
-C:\Users\dvj\Documents\Visual Studio 2015\Projects\AcountManager\AcountManager\obj\Release\AccountManager.csprojResolveAssemblyReference.cache
