@@ -1,0 +1,42 @@
+﻿<Window x:Class="AccountManager.AccountWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AccountManager"
+        mc:Ignorable="d"
+        Title="Аккаунт" Height="380" Width="400" Name="AccountWnd" ResizeMode="NoResize" SizeToContent="Height">
+    <Grid>
+        <StackPanel VerticalAlignment="Top" Name="accountForm">
+            <TextBox x:Name="id" HorizontalAlignment="Left"  TextWrapping="Wrap" Width="280" Visibility="Hidden" Text="{Binding Path=id}"/>
+            <WrapPanel  Orientation="Horizontal" Margin="0 0 0 10">
+                <Label x:Name="labelTitle" Content="Название:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" />
+                <TextBox x:Name="title" HorizontalAlignment="Left"  TextWrapping="Wrap" Width="280" Text="{Binding Path=title}" />
+            </WrapPanel>
+            <WrapPanel  Orientation="Horizontal" Margin="0 0 0 10">
+                <Label x:Name="labelUrl" Content="URL/Адрес:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" />
+                <TextBox x:Name="url" HorizontalAlignment="Left"  TextWrapping="Wrap" Text="{Binding Path=url}" Width="280" />
+            </WrapPanel>
+            <WrapPanel  Orientation="Horizontal" Margin="0 0 0 10">
+                <Label x:Name="labelLogin" Content="Логин:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" />
+                <TextBox x:Name="login" HorizontalAlignment="Left"  TextWrapping="Wrap" Text="{Binding Path=login}" Width="280" />
+            </WrapPanel>
+            <WrapPanel  Orientation="Horizontal" Margin="0 0 0 10">
+                <Label x:Name="labelPassword" Content="Пароль:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" />
+                <TextBox x:Name="password" HorizontalAlignment="Left"  TextWrapping="Wrap" Text="{Binding Path=password}" Width="280" />
+            </WrapPanel>
+            <WrapPanel  Orientation="Horizontal" Margin="0 0 0 10">
+                <Label x:Name="labelSort" Content="Сортировка:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" />
+                <TextBox x:Name="sort" HorizontalAlignment="Left"  TextWrapping="Wrap" Text="{Binding Path=sort}" Width="280" PreviewTextInput="checkDigit" PreviewKeyDown="checkSpace" />
+            </WrapPanel>
+            <WrapPanel  Orientation="Horizontal" Margin="0 0 0 10">
+                <Label x:Name="labelComment" Content="Комментарий:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" />
+                <TextBox x:Name="comment" HorizontalAlignment="Left"  TextWrapping="Wrap" Text="{Binding Path=comment}" Width="280" AcceptsReturn="True" Height="100"/>
+            </WrapPanel>
+            <WrapPanel  Orientation="Horizontal" Margin="0 0 0 10" HorizontalAlignment="Center">
+                <Button Content="Сохранить" Width="200" Click="saveAccount"/>
+            </WrapPanel>
+        </StackPanel>
+
+    </Grid>
+</Window>

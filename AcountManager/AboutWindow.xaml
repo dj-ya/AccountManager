@@ -1,0 +1,22 @@
+﻿<Window x:Class="AccountManager.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AccountManager"
+        mc:Ignorable="d"
+        Title="О программе" Height="260" Width="400" Name="aboutWnd">
+    <Grid>
+        <TextBlock TextWrapping="Wrap" Padding="10">
+            <Run FontSize="20" Foreground="Black" FontWeight="Bold" >Менеджер управления аккаунтами:</Run><LineBreak /><LineBreak />
+            Программа предназначена для хранения различных данных, доступов и аккаунтов.<LineBreak />
+            Пароли хранятся в зашифрованном виде.<LineBreak />
+            Двойнок клик по ячейке копирует данные ячейки в буфер обмена.
+            <LineBreak /><LineBreak />
+            База данных: C:/ProgrammData/JD/account_manager.db
+            <LineBreak /><LineBreak />
+            Разработчик: Жигарев Денис<LineBreak />
+            Поддержка: dvj@smartgroup.pro
+        </TextBlock>
+    </Grid>
+</Window>

@@ -1,0 +1,49 @@
+﻿<Window x:Class="AccountManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AccountManager"
+        mc:Ignorable="d"
+        Title="Менеджер управления аккаунтами" Height="350" Width="950" Icon="img/AppLogo.ico">
+    <ScrollViewer VerticalScrollBarVisibility="auto">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Menu x:Name="mainMenu" VerticalAlignment="Top">
+            <MenuItem Header="Добавить" Click="ShowAccountWnd" >
+            </MenuItem>
+            <Separator></Separator>
+            <MenuItem Header="О программе" Click="showAbout">
+            </MenuItem>
+            <Separator></Separator>
+            <MenuItem Header="Выход" Click="closeApp">
+            </MenuItem>
+        </Menu>
+            <DataGrid x:Name="accountGrid" AutoGenerateColumns="False" Margin="0,28,0,0" FontSize="14" IsReadOnly="True" MouseDoubleClick="accountGrid_MouseDoubleClick">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding Path=id}" Width="30" />
+                    <DataGridTextColumn Header="Сорт." Binding="{Binding Path=sort}" Width="50" />
+                    <DataGridTextColumn Header="Название" Binding="{Binding Path=title}" Width="*" />
+                    <DataGridTextColumn Header="URL" Binding="{Binding Path=url}" Width="*" />
+                    <DataGridTextColumn Header="Логин" Binding="{Binding Path=login}" Width="90" />
+                    <DataGridTextColumn Header="Пароль" Binding="{Binding Path=password}" Width="100" />
+                    <DataGridTextColumn Header="Комментарий" Binding="{Binding Path=comment}" Width="*" />
+                    <DataGridTemplateColumn Header="Действия">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <Image Source="img/browser.png" Stretch="None" MouseUp="openBrowser" ToolTip="Открыть в браузере" Margin="2"></Image>
+                                    <Image Source="img/edit.png" Stretch="None" MouseUp="editAccount" ToolTip="Редактировать" Margin="2"></Image>
+                                    <Image Source="img/delete.png" Stretch="None" MouseUp="removeAccount" ToolTip="Удалить" Margin="2"></Image>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </ScrollViewer>
+</Window>
