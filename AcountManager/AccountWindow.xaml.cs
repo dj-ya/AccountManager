@@ -48,7 +48,7 @@ namespace AccountManager
             }
             else
             {
-                MessageBox.Show("Должно быть заполнено поле \"Название\"");
+                MessageBox.Show("Должно быть заполнено поле \"Название\" ");
             }
         }
 
